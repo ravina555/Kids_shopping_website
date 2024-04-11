@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="View Cart Summary">
-            <IconButton>
+            <IconButton href='/CartSummary'>
             <ShoppingCartOutlinedIcon fontSize='medium' style={{margin:'20px 0px'}}/>
             </IconButton>
           </Tooltip>
