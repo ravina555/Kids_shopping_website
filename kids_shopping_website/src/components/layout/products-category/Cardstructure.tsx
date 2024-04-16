@@ -1,5 +1,5 @@
 
-import React,{useState} from 'react';
+import React from 'react';
 import Link from 'next/link';
 import {categories} from '../../../config';
 import { Grid , Paper , Box , Typography} from '@mui/material';
@@ -19,16 +19,8 @@ const Item = styled(Paper)(({ theme }) => ({
     maxWidth: '100%',height:'300px'
   });
 
-const Cardstructure=({Products}:any)=>{
-    // let filterProducts = Products.reduce((result: { [x: string]: any[]; }, item: { category: string})=> {
-    //     result[item.category] = result[item.category] || [];
-    //     result[item.category].push(item);
-    //     return result;
-    //   }, {});
-
+const Cardstructure=()=>{
     return (
-
-
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={12} >
       {categories.map((item)=>{

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import {Grid , Paper, Typography} from '@mui/material';
+import {Grid , Typography} from '@mui/material';
 import coverstoryimage from "../../Images/cover_story.jpg";
 
 const coverstorycontent={

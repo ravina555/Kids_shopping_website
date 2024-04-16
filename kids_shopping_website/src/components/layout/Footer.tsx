@@ -1,6 +1,6 @@
 import { Container , Grid , Typography , Box,Link} from '@mui/material';
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import { yellow, pink, grey } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 const grey_color = grey[200]
 const Footer=()=>{
