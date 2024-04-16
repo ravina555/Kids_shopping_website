@@ -21,3 +21,15 @@ export const categories=[{
 
 export const filters=['By Ratings' , 'By Cost'];
 
+export const pages = [{
+    name:'Home',
+    href:'/'
+    },{
+        name:'Lookbook',
+        href:'lookbook'
+    },{
+        name:'Blog',
+        href:'/blog'
+    }];
+
+

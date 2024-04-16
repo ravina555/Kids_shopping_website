@@ -19,6 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
   });
 
 const PageItemCards=({products}:any)=>{
+
     return (
       <Grid item sm={4} key={products.name} xs={12}>
       <Item style={{cursor:'pointer'}}>
@@ -28,7 +29,6 @@ const PageItemCards=({products}:any)=>{
       </Item>
       <Item style={{cursor:'pointer'}}>
       <Typography variant='caption'>Price : {`${products.price}$`}</Typography>
-        <Button>Add</Button>
       </Item>
     </Grid>
     )

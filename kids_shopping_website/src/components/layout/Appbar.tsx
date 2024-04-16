@@ -9,19 +9,14 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { yellow, pink, grey } from '@mui/material/colors';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import PersonOutlinedIcon from '@mui/icons-material/Person';
+import { pink, grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
+import {pages} from '../../config';
 
-
-const color = grey[500];
 const theme = createTheme({
         palette: {
           primary: {
@@ -31,7 +26,6 @@ const theme = createTheme({
         }
 });
 
-const pages = ['Home', 'Lookbook', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -107,8 +101,8 @@ function ResponsiveAppBar() {
               
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center" >{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu} >
+                  <Button href={page.href}><Typography>{page.name}</Typography></Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -135,32 +129,17 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}  justifyContent="center">
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
+                href={page.href}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-          <Tooltip title="View Cart Summary">
-            <IconButton href='/CartSummary'>
-            <ShoppingCartOutlinedIcon fontSize='medium' style={{margin:'20px 0px'}}/>
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Account">
-            <IconButton>
-            <PersonOutlinedIcon fontSize='medium'  style={{margin:'20px'}}/>
-            </IconButton>
-          </Tooltip>
-
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
