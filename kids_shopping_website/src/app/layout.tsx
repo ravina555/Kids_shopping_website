@@ -3,7 +3,6 @@ import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
-//import Navbar from '../components/layout/navbar';
 import ResponsiveAppBar from '@/components/layout/Appbar';
 import Footer from "@/components/layout/Footer";
 
