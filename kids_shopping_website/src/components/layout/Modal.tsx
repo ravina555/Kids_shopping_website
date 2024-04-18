@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import { Typography , Rating , Modal} from '@mui/material';
 
 const style = {
@@ -16,10 +15,8 @@ const style = {
 };
 
 export default function BasicModal({open , handleClose , currentProduct}:any) {
-
-
-  return (
-    <div>
+return (
+    <>
       {currentProduct?.length && 
       <Modal
         open={open}
@@ -30,19 +27,16 @@ export default function BasicModal({open , handleClose , currentProduct}:any) {
         <Box sx={style}>
         <div style={{cursor:'pointer'}}>
         <Typography variant='h6'> {`${currentProduct[0].title}$`}</Typography>
-
-        <Typography variant='body'> {`${currentProduct[0].description}$`}</Typography>
-        
-
+        <Typography variant='subtitle1'><Rating name="read-only" value={currentProduct[0].rating.rate} readOnly /> <span style={{float:'right'}}>{currentProduct[0].rating.count}</span></Typography>
+       
           <img alt={currentProduct.description} src={currentProduct[0].image} height='200px' width='200px'/>
-          <Typography variant='caption'>{currentProduct[0].title}</Typography>
+          <Typography variant='caption'>{currentProduct[0].description}</Typography>
       </div>
-      <Typography variant='caption'>Price : {`${currentProduct[0].price}$`}</Typography>
-      <Typography variant='caption'>Rating : <Rating name="read-only" value={currentProduct[0].rating.rate} readOnly /></Typography>
-        
+      <Typography variant='subtitle1'>Price : {`${currentProduct[0].price}$`}</Typography>
+       
         </Box>
       </Modal>
   }
-    </div>
+    </>
   );
 }

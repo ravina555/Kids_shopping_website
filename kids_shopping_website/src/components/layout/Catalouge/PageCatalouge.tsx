@@ -44,9 +44,10 @@ const PageCatalouge=({shopBy , categoryName}:any)=>{
   
     return(
       <div style={{padding:'50px'}}> 
+       <div className='catalouge' style={{textAlign:'center'}}>
         <Box sx={{ flexGrow: 1 }}>
-        <Grid container  spacing={12} columns={16}>
-          <Grid item xs={4} sm={4}>
+        <Grid container  spacing={12} >
+          <Grid item xs={12} sm={4}>
             <Item>
                 <CheckboxLabels shopBy={shopBy} setFilter={setFilter} filter={filter} setProducts={setProducts} products={products}/>
             </Item>
@@ -63,6 +64,7 @@ const PageCatalouge=({shopBy , categoryName}:any)=>{
         </Grid>
         </Grid>
       </Box>
+      </div>
       </div>
     )
 }

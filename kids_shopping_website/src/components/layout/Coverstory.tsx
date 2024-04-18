@@ -12,12 +12,12 @@ const coverstorycontent={
 const Coverstory=()=>{
     return(
         <section style={{padding:'50px 200px'}}>
-             <Grid container spacing={2}>
-            <Grid item xs={6} textAlign='start'>
+             <Grid container spacing={12}>
+            <Grid item xs={12} textAlign='start'>
                 <Typography variant='h6'>{coverstorycontent.text.heading}</Typography>
                 <Typography variant='body1'>{coverstorycontent.text.content}</Typography>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12}>
             <img
         src={coverstoryimage.src} 
         alt="image 1"

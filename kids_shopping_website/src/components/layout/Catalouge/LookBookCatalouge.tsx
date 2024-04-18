@@ -36,7 +36,7 @@ const LookBookCatalouge=()=>{
       <div style={{padding:'50px'}}> 
       {route.get('product') && <BasicModal open={open} handleClose={handleClose} currentProduct={getCurrentProduct}/>}
         <Box sx={{ flexGrow: 1 }}>
-        <Grid container  spacing={12} columns={16}>
+        <Grid container  spacing={12}>
           <Grid item xs={12} sm={12} md={16}>
           {isLoading ? <CircularProgress style={{position:'absolute', left:'50%' , top:'20%'}}/>:
             <Grid container spacing={12} >

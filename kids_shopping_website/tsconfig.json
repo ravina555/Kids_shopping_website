@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/lookbook/[Id]", "src/app/lookbook/[lookbookId]"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/lookbook/[Id]", "src/app/lookbook/[lookbookId]", ".next/types/app/lookbook/[Id]/index.tsx"],
   "exclude": ["node_modules"]
 }
