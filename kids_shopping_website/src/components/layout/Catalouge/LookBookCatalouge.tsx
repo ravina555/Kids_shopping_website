@@ -12,7 +12,6 @@ const LookBookCatalouge=()=>{
   const [products , setProducts] = useState([]);
   const [isLoading , setLoading] = useState(true);
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
   };

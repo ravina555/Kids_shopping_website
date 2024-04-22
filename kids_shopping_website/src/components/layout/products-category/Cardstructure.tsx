@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Cardstructure=()=>{
     return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={12} >
+      <Grid container spacing={12}>
       {categories.map((item)=>{
         return (
         <Grid item sm={3} key={item.name} xs={12}>
